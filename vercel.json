@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "cd admin-panel; npm run build; cd ..; mkdir -p public; cp \"auto blog-appv1/index.html\" public/index.html",
+  "buildCommand": "chmod +x build.sh; ./build.sh",
   "installCommand": "cd \"auto blog-appv1\"; npm install --legacy-peer-deps; cd ../admin-panel; npm install --legacy-peer-deps",
   "outputDirectory": "public",
   "framework": null,
@@ -76,36 +76,12 @@
       "destination": "/admin-panel/build/index.html"
     },
     {
-      "source": "/css/:path*",
-      "destination": "/auto blog-appv1/css/:path*"
-    },
-    {
-      "source": "/js/:path*",
-      "destination": "/auto blog-appv1/js/:path*"
-    },
-    {
-      "source": "/images/:path*",
-      "destination": "/auto blog-appv1/images/:path*"
-    },
-    {
-      "source": "/fonts/:path*",
-      "destination": "/auto blog-appv1/fonts/:path*"
-    },
-    {
       "source": "/article.html",
-      "destination": "/auto blog-appv1/article.html"
+      "destination": "/article.html"
     },
     {
       "source": "/author.html",
-      "destination": "/auto blog-appv1/author.html"
-    },
-    {
-      "source": "/index.html",
-      "destination": "/auto blog-appv1/index.html"
-    },
-    {
-      "source": "/",
-      "destination": "/auto blog-appv1/index.html"
+      "destination": "/author.html"
     }
   ],
   "headers": [
