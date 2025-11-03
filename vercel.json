@@ -101,19 +101,14 @@
     {
       "source": "/index.html",
       "destination": "/auto blog-appv1/index.html"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/",
-      "dest": "/auto blog-appv1/index.html",
-      "headers": {
-        "Cache-Control": "public, max-age=0, must-revalidate"
-      }
     },
     {
-      "src": "/(?!api|admin|login|dashboard|articles|analytics|users|categories|comments|media|settings|activity|authors|newsletter|search|tags|css|js|images|fonts|article\\.html|author\\.html|index\\.html).*",
-      "dest": "/auto blog-appv1/index.html"
+      "source": "/",
+      "destination": "/auto blog-appv1/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/auto blog-appv1/index.html"
     }
   ],
   "headers": [
