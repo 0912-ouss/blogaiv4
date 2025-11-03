@@ -19,16 +19,12 @@ import {
   CheckCircleIcon,
 } from '@heroicons/react/24/outline';
 import { formatNumber } from '../utils/helpers';
-import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
 import MostLikedArticles from '../components/Widgets/MostLikedArticles';
-
-const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899'];
 
 const Dashboard: React.FC = () => {
   const { theme } = useTheme();
   const navigate = useNavigate();
   const [stats, setStats] = useState<DashboardStats | null>(null);
-  const [topArticles, setTopArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
   const [generating, setGenerating] = useState(false);
   const [categories, setCategories] = useState<Category[]>([]);
@@ -53,16 +49,10 @@ const Dashboard: React.FC = () => {
   const fetchDashboardData = async () => {
     setLoading(true);
     try {
-      const [statsResponse, articlesResponse] = await Promise.all([
-        api.getDashboardStats(),
-        api.getTopArticles(5),
-      ]);
+      const statsResponse = await api.getDashboardStats();
 
       if (statsResponse.success && statsResponse.data) {
         setStats(statsResponse.data);
-      }
-      if (articlesResponse.success && articlesResponse.data) {
-        setTopArticles(articlesResponse.data);
       }
     } catch (error) {
       console.error('Error fetching dashboard data:', error);
