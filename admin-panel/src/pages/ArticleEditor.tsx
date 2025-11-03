@@ -11,8 +11,6 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { 
   ArrowLeftIcon, 
   PhotoIcon, 
-  TagIcon, 
-  GlobeAltIcon, 
   BoltIcon,
   EyeIcon,
   XMarkIcon,
@@ -82,7 +80,7 @@ const ArticleEditor: React.FC = () => {
     if (id) {
       fetchArticle();
     }
-  }, [id]);
+  }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchCategories = async () => {
     try {

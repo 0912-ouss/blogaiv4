@@ -35,7 +35,7 @@ const ActivityLogs: React.FC = () => {
     fetchUsers();
     fetchActivityLogs();
     fetchStats();
-  }, [page, filters]);
+  }, [page, filters]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchUsers = async () => {
     try {

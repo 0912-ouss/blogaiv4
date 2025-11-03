@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import api from '../../services/api';
 import { Article } from '../../types';
 import { HeartIcon, EyeIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 import { formatNumber } from '../../utils/helpers';
@@ -17,7 +16,7 @@ const MostLikedArticles: React.FC<MostLikedArticlesProps> = ({ limit = 5, showOn
 
   useEffect(() => {
     fetchMostLikedArticles();
-  }, [limit]);
+  }, [limit]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchMostLikedArticles = async () => {
     try {

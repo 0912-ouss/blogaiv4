@@ -44,7 +44,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
       setSuggestions([]);
       setShowSuggestionsList(false);
     }
-  }, [query]);
+  }, [query]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchSuggestions = async () => {
     try {
