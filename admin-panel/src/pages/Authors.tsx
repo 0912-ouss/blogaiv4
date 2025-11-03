@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
-import { Author, Article } from '../types';
+import { Author } from '../types';
 import {
   UserIcon,
-  DocumentTextIcon,
-  EyeIcon,
   PlusIcon,
   PencilIcon,
   TrashIcon,
   MagnifyingGlassIcon,
 } from '@heroicons/react/24/outline';
-import { formatNumber } from '../utils/helpers';
 import { useNavigate } from 'react-router-dom';
 
 const Authors: React.FC = () => {
