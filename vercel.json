@@ -18,12 +18,12 @@
       "destination": "/admin-panel/build/index.html"
     },
     {
-      "source": "/(.*\\.(html|css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|json))",
-      "destination": "/auto blog-appv1/$1"
-    },
-    {
       "source": "/",
       "destination": "/auto blog-appv1/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/auto blog-appv1/$1"
     }
   ],
   "headers": [
