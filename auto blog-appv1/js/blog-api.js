@@ -1,5 +1,5 @@
 // Simple Blog API Integration - Enhanced for full gmag theme
-const API_URL = 'http://localhost:3000/api';
+const API_URL = window.location.origin + '/api';
 
 $(document).ready(function() {
     console.log('🚀 Loading blog data...');
