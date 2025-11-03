@@ -2,7 +2,7 @@
   "version": 2,
   "buildCommand": "cd admin-panel && npm run build",
   "outputDirectory": "admin-panel/build",
-  "installCommand": "cd \"auto blog-appv1\" && npm install --legacy-peer-deps && cd ../admin-panel && npm install --legacy-peer-deps",
+  "installCommand": "(cd \"auto blog-appv1\" && npm install --legacy-peer-deps) && (cd admin-panel && npm install --legacy-peer-deps)",
   "framework": null,
   "rewrites": [
     {
