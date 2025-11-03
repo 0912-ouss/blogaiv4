@@ -3,13 +3,12 @@ import api from '../services/api';
 import { Comment } from '../types';
 import { formatDate } from '../utils/helpers';
 import { toast } from 'react-toastify';
-import { CheckCircleIcon, XCircleIcon, TrashIcon, EyeIcon, ChatBubbleLeftIcon } from '@heroicons/react/24/outline';
+import { CheckCircleIcon, XCircleIcon, TrashIcon, ChatBubbleLeftIcon } from '@heroicons/react/24/outline';
 
 const Comments: React.FC = () => {
   const [comments, setComments] = useState<Comment[]>([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<string>('all');
-  const [selectedComment, setSelectedComment] = useState<Comment | null>(null);
 
   useEffect(() => {
     fetchComments();

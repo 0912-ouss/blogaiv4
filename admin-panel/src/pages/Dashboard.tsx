@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
-import { DashboardStats, Article, Category } from '../types';
+import { DashboardStats, Category } from '../types';
 import StatCard from '../components/Common/StatCard';
 import { useTheme } from '../contexts/ThemeContext';
 import { useNavigate } from 'react-router-dom';
