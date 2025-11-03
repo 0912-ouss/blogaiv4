@@ -18,6 +18,10 @@
       "destination": "/admin-panel/build/index.html"
     },
     {
+      "source": "/(login|dashboard|articles|analytics|users|categories|comments|media|settings|activity|authors|newsletter|search|tags)(.*)",
+      "destination": "/admin-panel/build/index.html"
+    },
+    {
       "source": "/",
       "destination": "/auto blog-appv1/index.html"
     },
