@@ -22,8 +22,28 @@
       "destination": "/admin-panel/build/index.html"
     },
     {
-      "source": "/(.*\\.(html|css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|json|xml))",
-      "destination": "/auto blog-appv1/$1"
+      "source": "/css/:path*",
+      "destination": "/auto blog-appv1/css/:path*"
+    },
+    {
+      "source": "/js/:path*",
+      "destination": "/auto blog-appv1/js/:path*"
+    },
+    {
+      "source": "/images/:path*",
+      "destination": "/auto blog-appv1/images/:path*"
+    },
+    {
+      "source": "/fonts/:path*",
+      "destination": "/auto blog-appv1/fonts/:path*"
+    },
+    {
+      "source": "/article.html",
+      "destination": "/auto blog-appv1/article.html"
+    },
+    {
+      "source": "/author.html",
+      "destination": "/auto blog-appv1/author.html"
     },
     {
       "source": "/",
