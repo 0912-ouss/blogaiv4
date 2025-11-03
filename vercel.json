@@ -18,7 +18,59 @@
       "destination": "/admin-panel/build/index.html"
     },
     {
-      "source": "/(login|dashboard|articles|analytics|users|categories|comments|media|settings|activity|authors|newsletter|search|tags)(.*)",
+      "source": "/login",
+      "destination": "/admin-panel/build/index.html"
+    },
+    {
+      "source": "/dashboard",
+      "destination": "/admin-panel/build/index.html"
+    },
+    {
+      "source": "/articles/:path*",
+      "destination": "/admin-panel/build/index.html"
+    },
+    {
+      "source": "/analytics",
+      "destination": "/admin-panel/build/index.html"
+    },
+    {
+      "source": "/users",
+      "destination": "/admin-panel/build/index.html"
+    },
+    {
+      "source": "/categories",
+      "destination": "/admin-panel/build/index.html"
+    },
+    {
+      "source": "/comments",
+      "destination": "/admin-panel/build/index.html"
+    },
+    {
+      "source": "/media",
+      "destination": "/admin-panel/build/index.html"
+    },
+    {
+      "source": "/settings",
+      "destination": "/admin-panel/build/index.html"
+    },
+    {
+      "source": "/activity",
+      "destination": "/admin-panel/build/index.html"
+    },
+    {
+      "source": "/authors",
+      "destination": "/admin-panel/build/index.html"
+    },
+    {
+      "source": "/newsletter",
+      "destination": "/admin-panel/build/index.html"
+    },
+    {
+      "source": "/search",
+      "destination": "/admin-panel/build/index.html"
+    },
+    {
+      "source": "/tags",
       "destination": "/admin-panel/build/index.html"
     },
     {
@@ -44,6 +96,10 @@
     {
       "source": "/author.html",
       "destination": "/auto blog-appv1/author.html"
+    },
+    {
+      "source": "/index.html",
+      "destination": "/auto blog-appv1/index.html"
     },
     {
       "source": "/",
