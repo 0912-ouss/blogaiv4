@@ -5,8 +5,7 @@ node_modules/
 admin-panel/node_modules/
 "auto blog-appv1/node_modules/"
 
-# Build artifacts
-admin-panel/build/
+# Build artifacts (admin-panel/build/ is needed - keep it!)
 dist/
 
 # Environment files (use Vercel environment variables instead)
