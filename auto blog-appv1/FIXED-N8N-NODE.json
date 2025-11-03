@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "instanceId": "fixed-node-configuration"
+  },
+  "nodes": [
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:3000/api/articles",
+        "authentication": "none",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"title\": {{ JSON.stringify($json.title) }},\n  \"content\": {{ JSON.stringify($json.content) }},\n  \"excerpt\": {{ JSON.stringify($json.excerpt) }},\n  \"meta_description\": {{ JSON.stringify($json.meta_description) }},\n  \"category_id\": 1,\n  \"status\": \"published\"\n}",
+        "options": {}
+      },
+      "id": "5825654b-ac9f-4f83-a85c-b57ab04aca23",
+      "name": "Save to Database",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        272,
+        -288
+      ]
+    }
+  ],
+  "connections": {}
+}
+

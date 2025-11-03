@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+    <!--=============== basic  ===============-->
+    <meta charset="UTF-8">
+    <title>Blog - Neueste Nachrichten & Artikel</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="Blog, Nachrichten, Technologie, Wirtschaft" />
+    <meta name="description" content="Blog mit neuesten Nachrichten aus Technologie, Wirtschaft, Wissenschaft und mehr" />
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/api/rss" />
+    <!--=============== css  ===============-->
+    <link type="text/css" rel="stylesheet" href="css/plugins.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/color.css">
+    <!--=============== favicons ===============-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- main start  -->
+    <div id="main">
+        <!-- progress-bar  -->
+        <div class="progress-bar-wrap">
+            <div class="progress-bar color-bg"></div>
+        </div>
+        <!-- progress-bar end -->
+        
+        <!-- header -->
+        <header class="main-header">
+            <!-- top bar -->
+            <div class="top-bar fl-wrap">
+                <div class="container">
+                    <div class="date-holder">
+                        <span class="date_num"></span>
+                        <span class="date_mounth"></span>
+                        <span class="date_year"></span>
+                    </div>
+                    <div class="header_news-ticker-wrap">
+                        <div class="hnt_title">Aktuelle Nachrichten :</div>
+                        <div class="header_news-ticker fl-wrap">
+                            <ul id="news-ticker">
+                                <li><a href="#">Lade neueste Nachrichten...</a></li>
+                            </ul>
+                        </div>
+                        <div class="n_contr-wrap">
+                            <div class="n_contr p_btn"><i class="fas fa-caret-left"></i></div>
+                            <div class="n_contr n_btn"><i class="fas fa-caret-right"></i></div>
+                        </div>
+                    </div>
+                    <ul class="topbar-social">
+                        <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- top bar end -->
+            
+            <div class="header-inner fl-wrap">
+                <div class="container">
+                    <!-- logo holder  -->
+                    <a href="index.html" class="logo-holder"><img src="images/logo.png" alt=""></a>
+                    <!-- logo holder end -->
+                    <div class="search_btn htact show_search-btn"><i class="far fa-search"></i> <span class="header-tooltip">Suchen</span></div>
+                    
+                    <!-- header-search-wrap -->
+                    <div class="header-search-wrap novis_sarch">
+                        <div class="widget-inner">
+                            <form action="#">
+                                <input name="se" id="se" type="text" class="search" placeholder="Suchen..." value="" />
+                                <button class="search-submit" id="submit_btn"><i class="fa fa-search transition"></i> </button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- header-search-wrap end -->
+                    
+                    <!-- nav-button-wrap-->
+                    <div class="nav-button-wrap">
+                        <div class="nav-button">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <!-- nav-button-wrap end-->
+                    
+                    <!--  navigation -->
+                    <div class="nav-holder main-menu">
+                        <nav>
+                            <ul>
+                                <li><a href="index.html" class="act-link">Startseite</a></li>
+                                <li>
+                                    <a href="#">Kategorien <i class="fas fa-caret-down"></i></a>
+                                    <ul id="categories-list">
+                                        <li><a href="#">Lädt...</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- navigation  end -->
+                </div>
+            </div>
+        </header>
+        <!-- header end  -->
+        
+        <!-- wrapper -->
+        <div id="wrapper">
+            <!-- content    -->
+            <div class="content">
+                <!-- hero-slider-wrap     -->
+                <div class="hero-slider-wrap fl-wrap">
+                    <!-- hero-slider-container     -->
+                    <div class="hero-slider-container multi-slider fl-wrap full-height">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper" id="hero-slider-content">
+                                <!-- Dynamic hero slides will be loaded here -->
+                                <div class="swiper-slide">
+                                    <div class="bg-wrap">
+                                        <div class="bg" data-bg="images/all/1.jpg" data-swiper-parallax="40%"></div>
+                                        <div class="overlay"></div>
+                                    </div>
+                                    <div class="hero-item fl-wrap">
+                                        <div class="container">
+                                            <h2>Lade Artikel...</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fs-slider_btn color-bg fs-slider-button-prev"><i class="fas fa-caret-left"></i></div>
+                        <div class="fs-slider_btn color-bg fs-slider-button-next"><i class="fas fa-caret-right"></i></div>
+                    </div>
+                    <!-- hero-slider-container  end   -->
+                    
+                    <!-- hero-slider_controls-wrap   -->
+                    <div class="hero-slider_controls-wrap">
+                        <div class="container">
+                            <div class="hero-slider_controls-list multi-slider_control">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper" id="hero-controls-content">
+                                        <!-- Dynamic controls will be loaded here -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="multi-pag"></div>
+                        </div>
+                    </div>
+                    <!-- hero-slider_controls-wrap end  -->
+                    
+                    <div class="slider-progress-bar act-slider">
+                        <span>
+                            <svg class="circ" width="30" height="30">
+                                <circle class="circ2" cx="15" cy="15" r="13" stroke="rgba(255,255,255,0.4)" stroke-width="1" fill="none" />
+                                <circle class="circ1" cx="15" cy="15" r="13" stroke="#e93314" stroke-width="2" fill="none" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <!-- hero-slider-wrap  end   -->
+                
+                <!-- section   -->
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="main-container fl-wrap fix-container-init">
+                                    <div class="section-title">
+                                        <h2>Neueste Weltnachrichten</h2>
+                                        <h4>Verpassen Sie keine täglichen Nachrichten</h4>
+                                        <div class="ajax-nav">
+                                            <ul id="ajax-nav-categories">
+                                                <li><a href="#" class="current_page">Alle</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="ajax-wrapper fl-wrap">
+                                        <div class="ajax-loader"><img src="images/loading.gif" alt=""/></div>
+                                        <div id="ajax-content" class="fl-wrap">
+                                            <!-- Dynamic content will be loaded here -->
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="clearfix"></div>
+                                    <div class="section-title sect_dec">
+                                        <h2>Top-Stories</h2>
+                                        <h4>Verpassen Sie keine täglichen Nachrichten</h4>
+                                    </div>
+                                    
+                                    <div class="grid-post-wrap" id="top-stories">
+                                        <!-- Top stories will be loaded here -->
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <!-- sidebar   -->
+                                <div class="sidebar-content fl-wrap fix-bar">
+                                    <!-- box-widget -->
+                                    <div class="box-widget fl-wrap">
+                                        <div class="box-widget-content">
+                                            <!-- content-tabs-wrap -->
+                                            <div class="content-tabs-wrap tabs-act tabs-widget fl-wrap">
+                                                <div class="content-tabs fl-wrap">
+                                                    <ul class="tabs-menu fl-wrap no-list-style">
+                                                        <li class="current"><a href="#tab-popular"> Beliebte Nachrichten </a></li>
+                                                        <li><a href="#tab-resent">Aktuelle Nachrichten</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!--tabs -->                       
+                                                <div class="tabs-container">
+                                                    <!--tab -->
+                                                    <div class="tab">
+                                                        <div id="tab-popular" class="tab-content first-tab">
+                                                            <div class="post-widget-container fl-wrap" id="popular-posts">
+                                                                <!-- Popular posts will be loaded here -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--tab  end-->
+                                                    <!--tab -->
+                                                    <div class="tab">
+                                                        <div id="tab-resent" class="tab-content">
+                                                            <div class="post-widget-container fl-wrap" id="recent-posts">
+                                                                <!-- Recent posts will be loaded here -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--tab end-->							
+                                                </div>
+                                                <!--tabs end-->  
+                                            </div>
+                                            <!-- content-tabs-wrap end -->
+                                        </div>
+                                    </div>
+                                    <!-- box-widget  end -->
+                                    
+                                    <!-- box-widget -->
+                                    <div class="box-widget fl-wrap">
+                                        <div class="widget-title">Folgen Sie uns</div>
+                                        <div class="box-widget-content">
+                                            <div class="social-widget">
+                                                <a href="#" target="_blank" class="facebook-soc">
+                                                <i class="fab fa-facebook-f"></i>
+                                                <span class="soc-widget-title">Gefällt mir</span>
+                                                <span class="soc-widget_counter">2640</span>
+                                                </a>
+                                                <a href="#" target="_blank" class="twitter-soc">
+                                                <i class="fab fa-twitter"></i>
+                                                <span class="soc-widget-title">Follower</span>
+                                                <span class="soc-widget_counter">1456</span>												
+                                                </a> 
+                                                <a href="#" target="_blank" class="youtube-soc">
+                                                <i class="fab fa-youtube"></i>
+                                                <span class="soc-widget-title">Follower</span>
+                                                <span class="soc-widget_counter">1456</span>												
+                                                </a> 												
+                                                <a href="#" target="_blank" class="instagram-soc">
+                                                <i class="fab fa-instagram"></i>
+                                                <span class="soc-widget-title">Follower</span>
+                                                <span class="soc-widget_counter">1456</span>												
+                                                </a> 														
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- box-widget  end -->
+                                    
+                                    <!-- box-widget -->
+                                    <div class="box-widget fl-wrap">
+                                        <div class="widget-title">Beliebte Tags</div>
+                                        <div class="box-widget-content">
+                                            <div class="tags-widget" id="popular-tags">
+                                                <!-- Tags will be loaded here -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- box-widget  end -->
+                                </div>
+                                <!-- sidebar  end -->
+                            </div>
+                        </div>
+                        <div class="limit-box fl-wrap"></div>
+                    </div>
+                </section>
+                <!-- section end -->
+            </div>
+            <!-- content  end-->
+            
+            <!-- footer -->
+            <footer class="fl-wrap main-footer">
+                <div class="container">
+                    <!-- footer-widget-wrap -->
+                    <div class="footer-widget-wrap fl-wrap">
+                        <div class="row">
+                            <!-- footer-widget -->
+                            <div class="col-md-4">
+                                <div class="footer-widget">
+                                    <div class="footer-widget-content">
+                                        <a href="index.html" class="footer-logo"><img src="images/logo2.png" alt=""></a>
+                                        <p>Blog mit den neuesten Nachrichten aus Technologie, Wirtschaft, Wissenschaft und mehr. Bleiben Sie informiert mit unseren hochwertigen Inhalten.</p>
+                                        <div class="footer-social fl-wrap">
+                                            <ul>
+                                                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                                                <li><a href="#" target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- footer-widget  end-->
+                            
+                            <!-- footer-widget -->
+                            <div class="col-md-2">
+                                <div class="footer-widget">
+                                    <div class="footer-widget-title">Kategorien</div>
+                                    <div class="footer-widget-content">
+                                        <div class="footer-list footer-box fl-wrap">
+                                            <ul id="footer-categories">
+                                                <li><a href="#">Lädt...</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- footer-widget  end-->
+                            
+                            <!-- footer-widget -->
+                            <div class="col-md-2">
+                                <div class="footer-widget">
+                                    <div class="footer-widget-title">Links</div>
+                                    <div class="footer-widget-content">
+                                        <div class="footer-list footer-box fl-wrap">
+                                            <ul>
+                                                <li> <a href="index.html">Startseite</a></li>
+                                                <li> <a href="#">Über uns</a></li>
+                                                <li> <a href="#">Kontakt</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- footer-widget  end-->								
+                            
+                            <!-- footer-widget -->
+                            <div class="col-md-4">
+                                <div class="footer-widget">
+                                    <div class="footer-widget-title">Abonnieren</div>
+                                    <div class="footer-widget-content">
+                                        <div class="subcribe-form fl-wrap">
+                                            <p>Möchten Sie benachrichtigt werden, wenn wir neue Artikel veröffentlichen? Melden Sie sich einfach an und wir senden Ihnen Updates.</p>
+                                            <form id="subscribe" class="fl-wrap">
+                                                <input class="enteremail" name="email" id="subscribe-email" placeholder="Ihre E-Mail" spellcheck="false" type="text">
+                                                <button type="submit" id="subscribe-button" class="subscribe-button color-bg">Senden</button>
+                                                <label for="subscribe-email" class="subscribe-message"></label>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- footer-widget  end-->
+                        </div>
+                    </div>
+                    <!-- footer-widget-wrap end-->
+                </div>
+                <div class="footer-bottom fl-wrap">
+                    <div class="container">
+                        <div class="copyright"><span>&#169; Blog 2025</span> . Alle Rechte vorbehalten. </div>
+                        <div class="to-top"> <i class="fas fa-caret-up"></i></div>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer end-->
+        </div>
+        <!-- wrapper end -->
+    </div>
+    <!-- Main end -->
+    
+    <!--=============== scripts  ===============-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/blog-api.js"></script>
+    <script src="js/newsletter.js"></script>
+</body>
+</html>

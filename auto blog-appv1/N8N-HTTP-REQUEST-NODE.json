@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:3000/api/articles",
+        "authentication": "none",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "title",
+              "value": "={{ $json.title }}"
+            },
+            {
+              "name": "slug",
+              "value": "={{ $json.slug }}"
+            },
+            {
+              "name": "content",
+              "value": "={{ $json.content }}"
+            },
+            {
+              "name": "excerpt",
+              "value": "={{ $json.excerpt }}"
+            },
+            {
+              "name": "meta_description",
+              "value": "={{ $json.meta_description }}"
+            },
+            {
+              "name": "category_id",
+              "value": "={{ $json.category_id || 1 }}"
+            },
+            {
+              "name": "featured_image",
+              "value": "={{ $json.featured_image }}"
+            },
+            {
+              "name": "status",
+              "value": "published"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        352,
+        -240
+      ],
+      "id": "http-save-article",
+      "name": "Save Article via API",
+      "credentials": {}
+    }
+  ],
+  "connections": {},
+  "meta": {
+    "instanceId": "your-instance-id"
+  }
+}

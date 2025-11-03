@@ -1,0 +1,45 @@
+{
+  "name": "simple-blog",
+  "version": "1.0.0",
+  "description": "Simple blog with gmag theme and Supabase",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "blog",
+    "supabase",
+    "n8n"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
+    "@supabase/storage-js": "^2.78.0",
+    "@supabase/supabase-js": "^2.38.0",
+    "@tinymce/tinymce-react": "^6.3.0",
+    "@types/react-datepicker": "^6.2.0",
+    "axios": "^1.12.2",
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dompurify": "^3.3.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^8.2.0",
+    "form-data": "^4.0.4",
+    "jsdom": "^27.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mailgun.js": "^12.1.1",
+    "multer": "^2.0.2",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^6.9.15",
+    "react-datepicker": "^8.8.0",
+    "sharp": "^0.34.4",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

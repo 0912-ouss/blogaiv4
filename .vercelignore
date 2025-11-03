@@ -1,0 +1,43 @@
+# Files and directories to ignore during Vercel deployment
+
+# Node modules (will be installed during build)
+node_modules/
+admin-panel/node_modules/
+"auto blog-appv1/node_modules/"
+
+# Build artifacts
+admin-panel/build/
+dist/
+
+# Environment files (use Vercel environment variables instead)
+.env
+.env.local
+.env.*.local
+
+# Git
+.git/
+.gitignore
+
+# Documentation (optional - can include if needed)
+*.md
+!README.md
+
+# Development files
+.vscode/
+.idea/
+*.log
+.DS_Store
+
+# Testing
+coverage/
+.nyc_output/
+
+# Deployment configs for other platforms
+forge-quick-setup.sh
+FORGE-*.md
+CPANEL-*.md
+STEP-*.md
+FIX-*.md
+*.config.js
+ecosystem.config.js
+

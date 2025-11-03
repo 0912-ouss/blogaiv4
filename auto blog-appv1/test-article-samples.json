@@ -1,0 +1,50 @@
+[
+  {
+    "title": "The Future of Artificial Intelligence in 2025",
+    "slug": "future-artificial-intelligence-2025",
+    "subtitle": "How AI is reshaping technology and society",
+    "content": "<div class='post-content'>\n  <h2>Introduction</h2>\n  <p>Artificial Intelligence has become one of the most transformative technologies of our time. In 2025, we're seeing unprecedented advances that are reshaping every aspect of our lives.</p>\n  \n  <h3>Key Developments</h3>\n  <ul>\n    <li><strong>Neural Networks:</strong> Advanced deep learning models are achieving human-level performance.</li>\n    <li><strong>Natural Language Processing:</strong> AI can now understand context and emotion.</li>\n    <li><strong>Computer Vision:</strong> Image recognition systems surpass human accuracy.</li>\n    <li><strong>Autonomous Systems:</strong> Self-driving vehicles are becoming mainstream.</li>\n  </ul>\n  \n  <h3>Impact on Industries</h3>\n  <p>Healthcare, finance, education, and manufacturing are being revolutionized by AI-powered solutions.</p>\n  \n  <blockquote>\n    <p>\"AI is not just a technology—it's a fundamental shift in how we solve problems.\"</p>\n  </blockquote>\n  \n  <h3>Conclusion</h3>\n  <p>By developing AI thoughtfully and ethically, we can harness its power to create a better future.</p>\n</div>",
+    "excerpt": "Exploring how Artificial Intelligence is transforming technology, business, and society in 2025.",
+    "category_id": 1,
+    "author_name": "AI Content Generator",
+    "featured_image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
+    "image_copyright": "© Unsplash 2025",
+    "tags": ["AI", "Technology", "Innovation", "Machine Learning"],
+    "meta_title": "The Future of AI in 2025 - Complete Guide",
+    "meta_description": "Comprehensive guide to Artificial Intelligence in 2025. Learn about the latest AI developments and their impact.",
+    "status": "published",
+    "is_featured": true,
+    "is_trending": false,
+    "ai_generated": true
+  },
+  {
+    "title": "5 Daily Habits for Better Mental Health",
+    "slug": "5-daily-habits-better-mental-health",
+    "subtitle": "Small changes that make a big difference",
+    "content": "<div class='post-content'>\n  <h2>Why Mental Health Matters</h2>\n  <p>Taking care of your mental health is more important than ever. Here are five simple habits you can start today.</p>\n  \n  <h3>1. Morning Meditation (10 minutes)</h3>\n  <p>Start your day with mindfulness. Even 10 minutes can reduce stress and improve focus.</p>\n  \n  <h3>2. Regular Exercise</h3>\n  <p>Physical activity releases endorphins. Aim for 30 minutes daily.</p>\n  \n  <h3>3. Digital Detox Hours</h3>\n  <p>Set boundaries with technology. Designate phone-free times.</p>\n  \n  <h3>4. Gratitude Journaling</h3>\n  <p>Write down three things you're grateful for each day.</p>\n  \n  <h3>5. Quality Sleep Schedule</h3>\n  <p>Consistent sleep patterns are crucial. Aim for 7-9 hours nightly.</p>\n  \n  <h3>Getting Started</h3>\n  <p>Start with one habit, master it, then add another. Small steps lead to lasting change.</p>\n</div>",
+    "excerpt": "Transform your mental well-being with these five simple daily habits for meditation, exercise, and better sleep.",
+    "category_id": 3,
+    "author_name": "Wellness AI",
+    "featured_image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80",
+    "tags": ["Mental Health", "Wellness", "Self-Care", "Habits"],
+    "status": "published",
+    "is_featured": false,
+    "is_trending": true,
+    "ai_generated": true
+  },
+  {
+    "title": "Remote Work Revolution: Building High-Performance Teams",
+    "slug": "remote-work-revolution-building-teams",
+    "subtitle": "Strategies for success in the distributed workplace",
+    "content": "<div class='post-content'>\n  <h2>The New Normal</h2>\n  <p>Remote work has evolved from emergency response to strategic advantage. Here's how to build exceptional remote teams.</p>\n  \n  <h3>Communication is Everything</h3>\n  <ul>\n    <li>Daily stand-ups for alignment</li>\n    <li>Async updates for flexibility</li>\n    <li>Video calls for complex discussions</li>\n    <li>Documentation for knowledge sharing</li>\n  </ul>\n  \n  <h3>Trust and Autonomy</h3>\n  <p>Micromanagement kills productivity. Focus on outcomes, not hours.</p>\n  \n  <h3>Tools That Enable</h3>\n  <ul>\n    <li><strong>Slack/Teams:</strong> Communication hub</li>\n    <li><strong>Zoom:</strong> Video conferencing</li>\n    <li><strong>Asana/Jira:</strong> Project management</li>\n  </ul>\n  \n  <h3>Conclusion</h3>\n  <p>Remote work is here to stay. Companies that master distributed teams will have a competitive advantage.</p>\n</div>",
+    "excerpt": "Master remote work management with proven strategies for communication, trust, and culture in distributed teams.",
+    "category_id": 4,
+    "author_name": "Business Insights AI",
+    "featured_image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
+    "tags": ["Remote Work", "Business", "Management", "Productivity"],
+    "status": "published",
+    "is_featured": true,
+    "ai_generated": true
+  }
+]
+

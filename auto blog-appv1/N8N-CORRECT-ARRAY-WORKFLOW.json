@@ -1,0 +1,130 @@
+{
+  "name": "Article Generator with Array Fix",
+  "nodes": [
+    {
+      "parameters": {
+        "jsCode": "// Convert string fields to arrays for Supabase\nconst items = $input.all();\n\nreturn items.map(item => {\n  const data = item.json;\n  \n  // Helper function to convert string to array\n  const stringToArray = (str) => {\n    if (!str || str === '') return [];\n    if (Array.isArray(str)) return str;\n    return str.split(',').map(item => item.trim()).filter(item => item !== '');\n  };\n  \n  return {\n    json: {\n      title: data.title,\n      slug: data.slug,\n      content: data.content,\n      excerpt: data.excerpt || data.content.substring(0, 200),\n      category: data.category || 'general',\n      featured_image: data.featured_image || null,\n      author: data.author || 'AI Writer',\n      source_url: data.source_url || null,\n      \n      // Convert these fields from strings to arrays\n      meta_keywords: stringToArray(data.meta_keywords),\n      secondary_keywords: stringToArray(data.secondary_keywords),\n      tags: stringToArray(data.tags),\n      \n      // Keep these as strings\n      meta_description: data.meta_description || data.excerpt,\n      focus_keyword: data.focus_keyword || '',\n      \n      // Numbers\n      word_count: data.word_count || 0,\n      reading_time: data.reading_time || 4,\n      \n      // Status fields\n      status: 'published',\n      ai_generated: true,\n      published_at: new Date().toISOString()\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        600,
+        300
+      ],
+      "id": "convert-to-arrays",
+      "name": "Convert Strings to Arrays"
+    },
+    {
+      "parameters": {
+        "operation": "insert",
+        "tableId": "articles",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "title",
+              "fieldValue": "={{ $json.title }}"
+            },
+            {
+              "fieldId": "slug",
+              "fieldValue": "={{ $json.slug }}"
+            },
+            {
+              "fieldId": "content",
+              "fieldValue": "={{ $json.content }}"
+            },
+            {
+              "fieldId": "excerpt",
+              "fieldValue": "={{ $json.excerpt }}"
+            },
+            {
+              "fieldId": "category",
+              "fieldValue": "={{ $json.category }}"
+            },
+            {
+              "fieldId": "featured_image",
+              "fieldValue": "={{ $json.featured_image }}"
+            },
+            {
+              "fieldId": "meta_keywords",
+              "fieldValue": "={{ $json.meta_keywords }}"
+            },
+            {
+              "fieldId": "secondary_keywords",
+              "fieldValue": "={{ $json.secondary_keywords }}"
+            },
+            {
+              "fieldId": "tags",
+              "fieldValue": "={{ $json.tags }}"
+            },
+            {
+              "fieldId": "meta_description",
+              "fieldValue": "={{ $json.meta_description }}"
+            },
+            {
+              "fieldId": "focus_keyword",
+              "fieldValue": "={{ $json.focus_keyword }}"
+            },
+            {
+              "fieldId": "author",
+              "fieldValue": "={{ $json.author }}"
+            },
+            {
+              "fieldId": "source_url",
+              "fieldValue": "={{ $json.source_url }}"
+            },
+            {
+              "fieldId": "word_count",
+              "fieldValue": "={{ $json.word_count }}"
+            },
+            {
+              "fieldId": "reading_time",
+              "fieldValue": "={{ $json.reading_time }}"
+            },
+            {
+              "fieldId": "status",
+              "fieldValue": "={{ $json.status }}"
+            },
+            {
+              "fieldId": "ai_generated",
+              "fieldValue": "={{ $json.ai_generated }}"
+            },
+            {
+              "fieldId": "published_at",
+              "fieldValue": "={{ $json.published_at }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        800,
+        300
+      ],
+      "id": "save-to-database",
+      "name": "Save to Database",
+      "credentials": {
+        "supabaseApi": {
+          "id": "your-supabase-credential-id",
+          "name": "Supabase account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Convert Strings to Arrays": {
+      "main": [
+        [
+          {
+            "node": "Save to Database",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "meta": {
+    "instanceId": "your-instance-id"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Create Daily Stats Row",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 0 * * *"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        250,
+        300
+      ],
+      "id": "schedule-daily",
+      "name": "Every Day at Midnight"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT create_daily_stats_row();",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "id": "create-daily-row",
+      "name": "Create Daily Stats Row",
+      "credentials": {
+        "supabaseApi": {
+          "id": "your-supabase-credential-id",
+          "name": "Supabase account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Every Day at Midnight": {
+      "main": [
+        [
+          {
+            "node": "Create Daily Stats Row",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "instanceId": "your-instance-id"
+  }
+}

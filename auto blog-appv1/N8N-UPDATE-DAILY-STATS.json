@@ -1,0 +1,139 @@
+{
+  "name": "n8n Workflow - Auto Blog with Daily Limit Check",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 2
+            }
+          ]
+        }
+      },
+      "name": "Schedule Every 2 Hours",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT * FROM daily_stats WHERE date = CURRENT_DATE LIMIT 1"
+      },
+      "name": "Check Daily Limit",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [450, 300],
+      "credentials": {
+        "supabaseApi": {
+          "id": "YOUR_SUPABASE_CREDENTIAL_ID",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json[0].under_limit }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "name": "IF Under Limit?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [650, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:3000/api/articles",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"title\": \"Your Article Title\",\n  \"slug\": \"your-article-slug-{{ $now.format('x') }}\",\n  \"content\": \"<div class='post-content'><p>Your content here</p></div>\",\n  \"excerpt\": \"Article excerpt\",\n  \"category_id\": 1,\n  \"author_name\": \"AI Bot\",\n  \"status\": \"published\",\n  \"ai_generated\": true\n}",
+        "options": {}
+      },
+      "name": "Create Article",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [850, 200]
+    },
+    {
+      "parameters": {
+        "text": "=✅ Article Created!\n\nTitle: {{ $json.data.title }}\nSlug: {{ $json.data.slug }}\nToday's count: {{ $node[\"Check Daily Limit\"].json[0].articles_created + 1 }}/{{ $node[\"Check Daily Limit\"].json[0].daily_limit }}"
+      },
+      "name": "Success Notification",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [1050, 200]
+    },
+    {
+      "parameters": {
+        "text": "=⛔ Daily Limit Reached!\n\nArticles created today: {{ $node[\"Check Daily Limit\"].json[0].articles_created }}/{{ $node[\"Check Daily Limit\"].json[0].daily_limit }}\n\nNo more articles will be created today."
+      },
+      "name": "Limit Reached Alert",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [850, 400]
+    }
+  ],
+  "connections": {
+    "Schedule Every 2 Hours": {
+      "main": [
+        [
+          {
+            "node": "Check Daily Limit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Daily Limit": {
+      "main": [
+        [
+          {
+            "node": "IF Under Limit?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Under Limit?": {
+      "main": [
+        [
+          {
+            "node": "Create Article",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Limit Reached Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Article": {
+      "main": [
+        [
+          {
+            "node": "Success Notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
+

@@ -1,0 +1,70 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "tableId": "articles",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "slug",
+              "fieldValue": "={{ $json.slug }}-{{ $now.format('YYYYMMDD-HHmmss') }}-{{ Math.floor(Math.random() * 10000) }}"
+            },
+            {
+              "fieldId": "title",
+              "fieldValue": "={{ $json.title }}"
+            },
+            {
+              "fieldId": "content",
+              "fieldValue": "={{ $json.content }}"
+            },
+            {
+              "fieldId": "excerpt",
+              "fieldValue": "={{ $json.excerpt }}"
+            },
+            {
+              "fieldId": "meta_description",
+              "fieldValue": "={{ $json.meta_description }}"
+            },
+            {
+              "fieldId": "created_at",
+              "fieldValue": "={{ $json.created_at }}"
+            },
+            {
+              "fieldId": "updated_at",
+              "fieldValue": "={{ $json.updated_at }}"
+            },
+            {
+              "fieldId": "status",
+              "fieldValue": "published"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        352,
+        -240
+      ],
+      "id": "5825654b-ac9f-4f83-a85c-b57ab04aca23",
+      "name": "Save to Database",
+      "credentials": {
+        "supabaseApi": {
+          "id": "kDUV8ezIYGeYrG5r",
+          "name": "Supabase account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Save to Database": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "instanceId": "2a566d80c2d71351d1f31ad5abf4b867064ccaf38d7a57ef22ef375f5271cd91"
+  }
+}
