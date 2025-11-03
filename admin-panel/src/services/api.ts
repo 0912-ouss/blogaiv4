@@ -14,8 +14,8 @@ import {
   ChartData,
 } from '../types';
 
-// Base API URL - change this to your backend URL
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000/api';
+// Base API URL - use relative URL for Vercel, absolute for local development
+const API_BASE_URL = process.env.REACT_APP_API_URL || (process.env.NODE_ENV === 'production' ? '/api' : 'http://localhost:3000/api');
 
 class ApiService {
   private api: AxiosInstance;
