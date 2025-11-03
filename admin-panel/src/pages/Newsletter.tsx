@@ -51,7 +51,7 @@ const Newsletter: React.FC = () => {
     } else {
       fetchCampaigns();
     }
-  }, [activeTab, page, statusFilter, searchTerm]);
+  }, [activeTab, page, statusFilter, searchTerm]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchSubscribers = async () => {
     setLoading(true);

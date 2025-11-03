@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
 import { toast } from 'react-toastify';
-import { Cog6ToothIcon, GlobeAltIcon, BellIcon, ShieldCheckIcon, PaintBrushIcon, ArrowDownTrayIcon, ArrowUpTrayIcon, ShareIcon } from '@heroicons/react/24/outline';
+import { Cog6ToothIcon, GlobeAltIcon, BellIcon, ShieldCheckIcon, PaintBrushIcon, ArrowDownTrayIcon, ShareIcon } from '@heroicons/react/24/outline';
 
 const Settings: React.FC = () => {
   const [settings, setSettings] = useState({

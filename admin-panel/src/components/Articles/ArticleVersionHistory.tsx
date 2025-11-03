@@ -33,7 +33,7 @@ const ArticleVersionHistory: React.FC<ArticleVersionHistoryProps> = ({ articleId
     if (showModal && articleId) {
       fetchVersions();
     }
-  }, [showModal, articleId]);
+  }, [showModal, articleId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchVersions = async () => {
     setLoading(true);

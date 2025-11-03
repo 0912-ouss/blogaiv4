@@ -34,7 +34,7 @@ const Media: React.FC = () => {
 
   useEffect(() => {
     fetchMediaItems();
-  }, [page, fileTypeFilter, searchTerm]);
+  }, [page, fileTypeFilter, searchTerm]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchMediaItems = async () => {
     setLoading(true);

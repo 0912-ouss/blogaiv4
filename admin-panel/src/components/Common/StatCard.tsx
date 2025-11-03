@@ -20,7 +20,6 @@ const StatCard: React.FC<StatCardProps> = ({
   iconColor = 'bg-slate-900 dark:bg-slate-100',
 }) => {
   const isPositive = change && change > 0;
-  const isNegative = change && change < 0;
 
   return (
     <div className="stat-card group">

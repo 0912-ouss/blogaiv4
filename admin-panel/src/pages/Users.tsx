@@ -3,7 +3,7 @@ import api from '../services/api';
 import { AdminUser } from '../types';
 import { formatDate } from '../utils/helpers';
 import { toast } from 'react-toastify';
-import { PencilIcon, TrashIcon, UserCircleIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
+import { PencilIcon, TrashIcon, UserCircleIcon } from '@heroicons/react/24/outline';
 
 const Users: React.FC = () => {
   const [users, setUsers] = useState<AdminUser[]>([]);
@@ -12,7 +12,7 @@ const Users: React.FC = () => {
 
   useEffect(() => {
     fetchUsers();
-  }, [filter]);
+  }, [filter]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchUsers = async () => {
     setLoading(true);
