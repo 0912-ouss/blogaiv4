@@ -11,7 +11,7 @@ import {
   MagnifyingGlassIcon,
   ChatBubbleLeftRightIcon,
 } from '@heroicons/react/24/outline';
-import { getInitials, classNames, formatDate } from '../../utils/helpers';
+import { getInitials, formatDate } from '../../utils/helpers';
 import { toast } from 'react-toastify';
 import api from '../../services/api';
 import { Comment } from '../../types';
